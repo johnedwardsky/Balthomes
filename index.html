@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Недвижимость Калининграда | Светлана - Ваш личный эксперт</title>
+    <meta name="description"
+        content="Авторский подбор недвижимости в Калининграде. Персональный сервис и гарантии федеральной сети Этажи.">
+
+    <!-- Шрифты и иконки -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- PREMIUM CSS STYLES --- */
+        :root {
+            --primary: #0d2e61;
+            --primary-light: #1a4a8a;
+            --accent: #a8844a;
+            --accent-light: #c9a56b;
+            --etagi-red: #e31e24;
+            --text: #333333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--white);
+            padding-top: 80px;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* АНИМАЦИИ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        /* КНОПКИ */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 8px 25px rgba(168, 132, 74, 0.4);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(168, 132, 74, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(13, 46, 97, 0.3);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 60px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 2px;
+        }
+
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-desk {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-desk a {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .nav-desk a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-desk a:hover::after {
+            width: 100%;
+        }
+
+        .header-contacts {
+            text-align: right;
+            line-height: 1.3;
+        }
+
+        .phone {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 19px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .phone:hover {
+            color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .sub-phone {
+            font-size: 11px;
+            color: #777;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 26px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(135deg, #fdfbf7 0%, #eef2f7 100%);
+            padding: 80px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 132, 74, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .hero-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            margin-bottom: 35px;
+            color: #555;
+            max-width: 550px;
+            line-height: 1.7;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(13, 46, 97, 0.08);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 25px;
+            border: 1px solid rgba(13, 46, 97, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(13, 46, 97, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .badge-etagi {
+            background: rgba(227, 30, 36, 0.08);
+            color: var(--etagi-red);
+            border-color: rgba(227, 30, 36, 0.1);
+        }
+
+        .hero-img {
+            position: relative;
+            width: 45%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-img img {
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            border: 8px solid var(--white);
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            transition: all 0.4s ease;
+        }
+
+        .hero-img:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        .partner-badge {
+            position: absolute;
+            bottom: 30px;
+            right: -15px;
+            background: var(--white);
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        /* --- STATS SECTION --- */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 60px 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            color: var(--white);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- TRUST BLOCK --- */
+        .trust-block {
+            background: var(--white);
+            padding: 80px 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .trust-item {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .trust-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+            background: var(--white);
+        }
+
+        .trust-icon {
+            font-size: 40px;
+            color: var(--accent);
+            min-width: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .trust-item:hover .trust-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .trust-content h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .trust-content p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* --- QUIZ --- */
+        .quiz-section {
+            background-image: linear-gradient(rgba(13, 46, 97, 0.92), rgba(26, 74, 138, 0.92)),
+                url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .quiz-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(168, 132, 74, 0.2) 0%, transparent 50%);
+        }
+
+        .quiz-section h2 {
+            color: var(--white);
+        }
+
+        .quiz-section>.container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .quiz-box {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 850px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 240px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 16px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        select:focus,
+        input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(168, 132, 74, 0.2);
+        }
+
+        .btn-quiz {
+            width: 100%;
+            font-size: 19px;
+            padding: 20px;
+        }
+
+        /* --- CATALOG PREVIEW --- */
+        .catalog-preview {
+            background: var(--bg-light);
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .card-img {
+            height: 240px;
+            background: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.1);
+        }
+
+        .card-price {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-body h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-body h3 {
+            color: var(--accent);
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 20px;
+            color: #777;
+            font-size: 14px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* --- REVIEWS --- */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .review-card {
+            background: #fff;
+            padding: 35px;
+            border-radius: 20px;
+            border: 2px solid #f0f0f0;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .review-card::before {
+            content: '\201C';
+            font-size: 80px;
+            color: var(--accent);
+            opacity: 0.15;
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            background: #ddd;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+        }
+
+        .author-info strong {
+            display: block;
+            color: var(--primary);
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        .author-info span {
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* --- ABOUT & SERVICES --- */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-section h2 {
+            text-align: left;
+        }
+
+        .about-section h2::after {
+            left: 0;
+            transform: none;
+        }
+
+        .services-list li {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .services-list i {
+            color: var(--accent);
+            font-size: 20px;
+            margin-top: 2px;
+        }
+
+        .about-section img {
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+        }
+
+        .about-section img:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            color: #bbb;
+            padding: 80px 0 30px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 25px;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .socials a {
+            color: #fff;
+            margin-right: 15px;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .socials a:hover {
+            color: var(--accent);
+            transform: translateY(-3px) scale(1.2);
+        }
+
+        .legal-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 30px;
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            line-height: 1.8;
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            .nav-desk {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 30px;
+                text-align: center;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-desk.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .header-contacts {
+                display: none;
+            }
+
+            .hero-wrapper {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .hero-img {
+                width: 100%;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section h2 {
+                text-align: center;
+            }
+
+            .about-section h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .partner-badge {
+                right: 50%;
+                transform: translateX(50%);
+                bottom: -20px;
+                width: max-content;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .quiz-box {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. ШАПКА -->
+    <header id="header">
+        <div class="container header-inner">
+            <!-- Логотип -->
+            <a href="#" class="logo">Balt<span>homes</span></a>
+
+            <!-- Меню -->
+            <nav class="nav-desk" id="navMenu">
+                <a href="#about">Обо мне</a>
+                <a href="#services">Услуги</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="#reviews">Отзывы</a>
+            </nav>
+
+            <!-- Контакты -->
+            <div class="header-contacts">
+                <a href="tel:+79000000000" class="phone">+7 (900) 000-00-00</a>
+                <span class="sub-phone">Ежедневно 09:00 - 21:00</span>
+            </div>
+
+            <!-- Бургер -->
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. ГЛАВНЫЙ ЭКРАН (HERO) -->
+    <section class="hero">
+        <div class="container hero-wrapper">
+            <div class="hero-text">
+                <div class="hero-badges fade-in delay-1">
+                    <span class="badge"><i class="fas fa-user-check"></i> Личный подход</span>
+                    <span class="badge badge-etagi"><i class="fas fa-shield-alt"></i> Гарантия ЭТАЖИ</span>
+                </div>
+                <h1 class="fade-in delay-2">Недвижимость у моря<br>без рисков и переплат</h1>
+                <p class="fade-in delay-3">Ваш персональный гид по Калининграду Светлана. Душевный сервис частного
+                    брокера с юридической защитой компании №1 в России.</p>
+
+                <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; md:justify-content: flex-start;"
+                    class="fade-in delay-4">
+                    <a href="#quiz" class="btn">Подобрать квартиру</a>
+                    <a href="catalog.html" class="btn btn-outline">Смотреть каталог</a>
+                </div>
+            </div>
+
+            <div class="hero-img fade-in delay-2">
+                <img src="https://i.ibb.co/3sxhd6S/realtor.jpg" alt="Светлана риелтор">
+                <!-- Бейдж партнера -->
+                <div class="partner-badge">
+                    <img src="https://cdn.etagi.com/static/site/6a0c487313/logo.svg" alt="Этажи"
+                        style="height: 20px; width: auto; border:none; border-radius:0; box-shadow:none;">
+                    <span>Сертифицированный<br>партнер</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СТАТИСТИКА -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number" data-target="142">0</div>
+                    <div class="stat-label">Объектов в портфеле</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number" data-target="87">0</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Лет опыта</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% Безопасных сделок</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. БЛОК ДОВЕРИЯ (ПОЗИЦИОНИРОВАНИЕ) -->
+    <div class="trust-block">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item scroll-reveal">
+                    <div class="trust-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="trust-content">
+                        <h4>Забота о вас</h4>
+                        <p>Я не «колл-центр». Я лично веду вас от звонка до вручения ключей, встречаю в аэропорту и
+                            помогаю адаптироваться.</p>
+                    </div>
+                </div>
+                <div class="trust-item scroll-reveal">
+                    <div class="trust-icon"><i class="fas fa-file-contract"></i></div>
+                    <div class="trust-content">
+                        <h4>Безопасность «Этажей»</h4>
+                        <p>Юридическая проверка и проведение сделки через сервисы «Этажей». Вы получаете сертификат
+                            безопасности на всю сумму.</p>
+                    </div>
+                </div>
+                <div class="trust-item scroll-reveal">
+                    <div class="trust-icon"><i class="fas fa-percent"></i></div>
+                    <div class="trust-content">
+                        <h4>Ипотека дешевле</h4>
+                        <p>Как партнер крупной сети, я могу одобрить вам ипотеку со скидкой до 0.7% от ставок банков.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. КВИЗ (СБОР ЗАЯВОК) -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2>Не тратьте время на поиск вслепую</h2>
+            <p style="margin-bottom: 30px; font-size: 18px;">Ответьте на 3 вопроса, и я пришлю подборку ликвидных
+                квартир под ваш бюджет в WhatsApp.</p>
+
+            <div class="quiz-box">
+                <!-- Форма отправляет на thanks.html -->
+                <form action="thanks.html" method="GET">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Какая цель покупки?</label>
+                            <select>
+                                <option>Переезд на ПМЖ</option>
+                                <option>Инвестиции (сдача/перепродажа)</option>
+                                <option>Квартира для отпуска</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Бюджет покупки?</label>
+                            <select>
+                                <option>до 6 млн ₽</option>
+                                <option>6 - 9 млн ₽</option>
+                                <option>от 9 млн ₽</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Ваш номер (WhatsApp):</label>
+                            <input type="tel" placeholder="+7 (999) 000-00-00" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-quiz">Получить подборку</button>
+                    <p style="font-size: 11px; margin-top: 15px; color: #ccc;">Нажимая кнопку, вы соглашаетесь с
+                        политикой конфиденциальности</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ПРЕВЬЮ КАТАЛОГА -->
+    <section class="catalog-preview">
+        <div class="container">
+            <h2 class="scroll-reveal">Популярные предложения недели</h2>
+            <div class="catalog-grid">
+                <!-- Карточка 1 -->
+                <a href="object.html" class="card scroll-reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500" alt="Квартира">
+                        <div class="card-price">7 500 000 ₽</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Евродвушка в Зеленоградске</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-expand"></i> 45 м²</span>
+                            <span><i class="fas fa-water"></i> у моря</span>
+                        </div>
+                        <p style="font-size: 14px; color: #555;">ЖК "Прибой", идеальна под сдачу. Новый ремонт.</p>
+                    </div>
+                </a>
+
+                <!-- Карточка 2 -->
+                <a href="object.html" class="card scroll-reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500" alt="Квартира">
+                        <div class="card-price">12 300 000 ₽</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Центр Калининграда</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-expand"></i> 82 м²</span>
+                            <span><i class="fas fa-city"></i> Верхнее озеро</span>
+                        </div>
+                        <p style="font-size: 14px; color: #555;">Премиум-класс, серый ключ, панорамные окна.</p>
+                    </div>
+                </a>
+
+                <!-- Карточка 3 -->
+                <a href="object.html" class="card scroll-reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1600596542815-2495db9dc2c3?w=500" alt="Дом">
+                        <div class="card-price">15 000 000 ₽</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Дом в Гурьевске</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-home"></i> 150 м²</span>
+                            <span><i class="fas fa-tree"></i> 8 соток</span>
+                        </div>
+                        <p style="font-size: 14px; color: #555;">ИЖС, все коммуникации, 15 минут до центра.</p>
+                    </div>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="catalog.html" class="btn btn-outline">Смотреть все 142 объекта</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. УСЛУГИ (ОБО МНЕ) -->
+    <section id="services">
+        <div class="container about-section">
+            <div class="scroll-reveal">
+                <h2>Как я работаю</h2>
+                <p style="margin-bottom: 25px; font-size: 16px; line-height: 1.8;">Моя задача — сделать ваш переезд или
+                    инвестицию комфортной. Вы не платите мне лишних комиссий, мои услуги включены в стандарты работы
+                    компании.</p>
+                <ul class="services-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Дистанционная покупка:</strong> Проведу
+                        видео-экскурсию, подпишем документы электронно.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Встреча и трансфер:</strong> Встречу в аэропорту
+                        Храброво, помогу заселиться.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Аналитика рынка:</strong> Честно скажу, какой район
+                        переоценен, а какой вырастет в цене.</li>
+                </ul>
+            </div>
+            <div class="scroll-reveal">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Калининград">
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ОТЗЫВЫ (REVIEWS) -->
+    <section id="reviews" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="scroll-reveal">Что говорят клиенты</h2>
+            <div class="reviews-grid">
+                <!-- Отзыв 1 -->
+                <div class="review-card scroll-reveal">
+                    <p class="review-text">"Светлана нашла нам квартиру за 3 дня, хотя мы планировали искать неделю.
+                        Очень удобно, что сделку оформили в офисе Этажей, все надежно."</p>
+                    <div class="review-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="author-avatar" alt="Клиент">
+                        <div class="author-info">
+                            <strong>Елена Миронова</strong>
+                            <span>переехала из Омска</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Отзыв 2 -->
+                <div class="review-card scroll-reveal">
+                    <p class="review-text">"Покупал под инвестицию удаленно. Светлана отговорила от проблемного ЖК и
+                        предложила вариант, который уже вырос на 20%. Спасибо!"</p>
+                    <div class="review-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="author-avatar" alt="Клиент">
+                        <div class="author-info">
+                            <strong>Алексей В.</strong>
+                            <span>Инвестор, Москва</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Отзыв 3 -->
+                <div class="review-card scroll-reveal">
+                    <p class="review-text">"Боялись покупать вторичку из-за документов. Светлана подключила юристов
+                        Этажей, проверили продавца до 7-го колена. Спокойствие стоит того."</p>
+                    <div class="review-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="author-avatar" alt="Клиент">
+                        <div class="author-info">
+                            <strong>Ольга Петрова</strong>
+                            <span>Купила квартиру родителям</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ПОДВАЛ (FOOTER) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: #fff; margin-bottom: 15px;">Balt<span>homes</span></div>
+                    <p>Помогаем обрести дом у Балтийского моря.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p>📞 +7 (900) 000-00-00</p>
+                    <p>📍 г. Калининград</p>
+                    <p>✉️ svetlana@balthomes.ru</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Соцсети</h4>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-text">
+                <p>Сайт balthomes.ru носит информационный характер. <br>
+                    Светлана [Фамилия] — независимый эксперт по недвижимости, действующий партнер федеральной сети
+                    «Этажи». <br>
+                    Юридическое сопровождение сделок осуществляется ООО "Этажи-Калининград".</p>
+                <p style="margin-top: 10px;">© 2026 Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- СКРИПТЫ -->
+    <script>
+        // Мобильное меню
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        // Скролл эффекты для header
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Анимация при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Анимация счетчиков
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    element.textContent = target + (target === 100 ? '%' : '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Запуск счетчиков при появлении
+        const statsObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target.querySelector('.stat-number');
+                    if (counter && counter.textContent === '0') {
+                        animateCounter(counter);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-item').forEach(el => {
+            statsObserver.observe(el);
+        });
+
+        // Плавный скролл к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Закрыть мобильное меню
+                        document.getElementById('navMenu').classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
