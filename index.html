@@ -735,8 +735,14 @@
     </header>
 
     <!-- 2. ГЛАВНЫЙ ЭКРАН (HERO) -->
-    <section class="hero">
-        <div class="container hero-wrapper">
+    <section class="hero" style="position: relative; overflow: hidden;">
+        <!-- Фоновый водяной знак логотипа -->
+        <div class="hero-watermark"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; width: 85%; pointer-events: none; z-index: 0;">
+            <img src="images/logo.png" alt="" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="container hero-wrapper" style="position: relative; z-index: 1;">
             <div class="hero-text">
                 <div class="hero-badges">
                     <span class="badge"><i class="fas fa-user-check"></i> Личный подход</span>
