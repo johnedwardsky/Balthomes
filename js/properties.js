@@ -12,7 +12,7 @@
  */
 const properties = [
     {
-        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500',
+        image: 'images/18_05.jpg', // ← Ваше фото из GitHub!
         price: '7 500 000 ₽',
         title: 'Евродвушка в Зеленоградске',
         meta1: '<i class="fas fa-expand"></i> 45 м²',
@@ -20,7 +20,7 @@ const properties = [
         description: 'ЖК "Прибой", идеальна под сдачу. Новый ремонт.'
     },
     {
-        image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500',
+        image: 'images/18_05.jpg', // Замените на другое фото, например images/apartment-2.jpg
         price: '12 300 000 ₽',
         title: 'Центр Калининграда',
         meta1: '<i class="fas fa-expand"></i> 82 м²',
@@ -28,7 +28,7 @@ const properties = [
         description: 'Премиум-класс, серый ключ, панорамные окна.'
     },
     {
-        image: 'https://images.unsplash.com/photo-1600596542815-2495db9dc2c3?w=500',
+        image: 'images/18_05.jpg', // Замените на другое фото, например images/apartment-3.jpg
         price: '15 000 000 ₽',
         title: 'Дом в Гурьевске',
         meta1: '<i class="fas fa-home"></i> 150 м²',
