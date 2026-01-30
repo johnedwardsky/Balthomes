@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Недвижимость Калининграда | Светлана - Ваш личный эксперт</title>
-    <meta name="description" content="Авторский подбор недвижимости в Калининграде. Персональный сервис и гарантии федеральной сети Этажи.">
-    
+    <meta name="description"
+        content="Авторский подбор недвижимости в Калининграде. Персональный сервис и гарантии федеральной сети Этажи.">
+
     <!-- Шрифты и иконки -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,30 +15,53 @@
     <style>
         /* --- CSS STYLES --- */
         :root {
-            --primary: #0d2e61;    /* Глубокий синий (Balthomes) */
-            --accent: #a8844a;     /* Золотой/Песочный */
-            --etagi-red: #e31e24;  /* Красный (для акцента на гарантии) */
+            --primary: #0d2e61;
+            /* Глубокий синий (Balthomes) */
+            --accent: #a8844a;
+            /* Золотой/Песочный */
+            --etagi-red: #e31e24;
+            /* Красный (для акцента на гарантии) */
             --text: #333333;
             --bg-light: #f4f7f6;
             --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             color: var(--text);
             line-height: 1.6;
             background-color: var(--white);
-            padding-top: 80px; /* Отступ под фиксированную шапку */
+            padding-top: 80px;
+            /* Отступ под фиксированную шапку */
         }
 
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
         /* КНОПКИ */
         .btn {
@@ -50,23 +75,45 @@
             border: none;
             box-shadow: 0 4px 15px rgba(168, 132, 74, 0.3);
         }
-        .btn:hover { background-color: #8f6f3a; transform: translateY(-2px); }
-        
+
+        .btn:hover {
+            background-color: #8f6f3a;
+            transform: translateY(-2px);
+        }
+
         .btn-outline {
             background: transparent;
             border: 2px solid var(--primary);
             color: var(--primary);
         }
-        .btn-outline:hover { background: var(--primary); color: var(--white); }
 
-        h1, h2, h3 { color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
-        h2 { font-size: 32px; text-align: center; margin-bottom: 40px; }
-        section { padding: 80px 0; }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
 
         /* --- HEADER --- */
         header {
             background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: fixed;
             top: 0;
             width: 100%;
@@ -75,20 +122,64 @@
             display: flex;
             align-items: center;
         }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        
-        .logo { font-size: 24px; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
-        .logo span { color: var(--accent); }
 
-        .nav-desk { display: flex; gap: 30px; }
-        .nav-desk a { font-weight: 600; font-size: 14px; color: var(--primary); }
-        .nav-desk a:hover { color: var(--accent); }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
 
-        .header-contacts { text-align: right; line-height: 1.2; }
-        .phone { font-weight: 700; color: var(--primary); font-size: 18px; display: block;}
-        .sub-phone { font-size: 11px; color: #777; }
-        
-        .mobile-toggle { display: none; font-size: 24px; color: var(--primary); cursor: pointer; }
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-desk {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-desk a {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        .nav-desk a:hover {
+            color: var(--accent);
+        }
+
+        .header-contacts {
+            text-align: right;
+            line-height: 1.2;
+        }
+
+        .phone {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 18px;
+            display: block;
+        }
+
+        .sub-phone {
+            font-size: 11px;
+            color: #777;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            color: var(--primary);
+            cursor: pointer;
+        }
 
         /* --- HERO SECTION --- */
         .hero {
@@ -96,19 +187,60 @@
             padding: 60px 0;
             overflow: hidden;
         }
-        .hero-wrapper { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
-        
-        .hero-text h1 { font-size: 40px; font-weight: 700; }
-        .hero-text p { font-size: 18px; margin-bottom: 30px; color: #555; max-width: 500px; }
-        
-        .hero-badges {
-            display: flex; gap: 15px; margin-bottom: 25px; font-size: 13px; font-weight: 600;
-        }
-        .badge { background: rgba(13, 46, 97, 0.1); color: var(--primary); padding: 5px 12px; border-radius: 4px; }
-        .badge-etagi { background: rgba(227, 30, 36, 0.1); color: var(--etagi-red); }
 
-        .hero-img { position: relative; width: 45%; }
-        .hero-img img { border-radius: 20px; box-shadow: var(--shadow); border: 5px solid var(--white); width: 100%; max-width: 400px; margin: 0 auto; }
+        .hero-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text h1 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 500px;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .badge {
+            background: rgba(13, 46, 97, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+
+        .badge-etagi {
+            background: rgba(227, 30, 36, 0.1);
+            color: var(--etagi-red);
+        }
+
+        .hero-img {
+            position: relative;
+            width: 45%;
+        }
+
+        .hero-img img {
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 5px solid var(--white);
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
         /* Бейдж партнера на фото */
         .partner-badge {
             position: absolute;
@@ -117,7 +249,7 @@
             background: var(--white);
             padding: 10px 15px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -127,12 +259,39 @@
         }
 
         /* --- POSITIONING BLOCK (TRUST) --- */
-        .trust-block { background: var(--white); padding: 50px 0; border-bottom: 1px solid #eee; }
-        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .trust-item { display: flex; gap: 20px; align-items: flex-start; }
-        .trust-icon { font-size: 32px; color: var(--accent); min-width: 40px; }
-        .trust-content h4 { margin-bottom: 5px; color: var(--primary); }
-        .trust-content p { font-size: 14px; color: #666; }
+        .trust-block {
+            background: var(--white);
+            padding: 50px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .trust-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .trust-icon {
+            font-size: 32px;
+            color: var(--accent);
+            min-width: 40px;
+        }
+
+        .trust-content h4 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .trust-content p {
+            font-size: 14px;
+            color: #666;
+        }
 
         /* --- QUIZ --- */
         .quiz-section {
@@ -142,70 +301,287 @@
             color: var(--white);
             text-align: center;
         }
-        .quiz-section h2 { color: var(--white); }
+
+        .quiz-section h2 {
+            color: var(--white);
+        }
+
         .quiz-box {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             padding: 40px;
             max-width: 800px;
             margin: 0 auto;
         }
-        .form-row { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
-        .form-group { flex: 1; min-width: 220px; text-align: left; }
-        .form-group label { display: block; font-size: 13px; margin-bottom: 8px; opacity: 0.9; }
-        select, input { width: 100%; padding: 15px; border-radius: 8px; border: none; font-size: 16px; outline: none; }
-        .btn-quiz { width: 100%; font-size: 18px; }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 220px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .btn-quiz {
+            width: 100%;
+            font-size: 18px;
+        }
 
         /* --- CATALOG PREVIEW --- */
-        .catalog-preview { background: var(--bg-light); }
-        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card-img { height: 220px; background: #ddd; position: relative; }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; }
-        .card-price { position: absolute; bottom: 10px; left: 10px; background: var(--primary); color: #fff; padding: 5px 10px; border-radius: 5px; font-weight: 700; }
-        .card-body { padding: 20px; }
-        .card-meta { display: flex; gap: 15px; color: #777; font-size: 13px; margin: 10px 0; }
+        .catalog-preview {
+            background: var(--bg-light);
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 220px;
+            background: #ddd;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-price {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: var(--primary);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 15px;
+            color: #777;
+            font-size: 13px;
+            margin: 10px 0;
+        }
 
         /* --- REVIEWS --- */
-        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .review-card { background: #fff; padding: 30px; border-radius: 12px; border: 1px solid #eee; position: relative; }
-        .review-card::before { content: '\201C'; font-size: 60px; color: var(--accent); opacity: 0.3; position: absolute; top: 10px; left: 20px; font-family: serif; }
-        .review-text { font-style: italic; color: #555; margin-bottom: 20px; position: relative; z-index: 1; }
-        .review-author { display: flex; align-items: center; gap: 15px; }
-        .author-avatar { width: 50px; height: 50px; background: #ddd; border-radius: 50%; object-fit: cover; }
-        .author-info strong { display: block; color: var(--primary); font-size: 14px; }
-        .author-info span { font-size: 12px; color: #888; }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '\201C';
+            font-size: 60px;
+            color: var(--accent);
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: #ddd;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info strong {
+            display: block;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .author-info span {
+            font-size: 12px;
+            color: #888;
+        }
 
         /* --- ABOUT & SERVICES --- */
-        .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .services-list li { margin-bottom: 15px; display: flex; gap: 10px; align-items: center; }
-        .services-list i { color: var(--accent); }
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .services-list li {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .services-list i {
+            color: var(--accent);
+        }
 
         /* --- FOOTER --- */
-        footer { background: #1a1a1a; color: #bbb; padding: 60px 0 20px; font-size: 14px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-col h4 { color: #fff; margin-bottom: 20px; font-size: 16px; }
-        .socials a { color: #fff; margin-right: 15px; font-size: 20px; transition: 0.3s; }
-        .socials a:hover { color: var(--accent); }
-        .legal-text { font-size: 12px; color: #666; margin-top: 20px; text-align: center; border-top: 1px solid #333; padding-top: 20px; }
+        footer {
+            background: #1a1a1a;
+            color: #bbb;
+            padding: 60px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .socials a {
+            color: #fff;
+            margin-right: 15px;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: var(--accent);
+        }
+
+        .legal-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
 
         /* --- MOBILE --- */
         @media (max-width: 768px) {
-            .nav-desk { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: #fff; flex-direction: column; padding: 20px; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
-            .nav-desk.active { display: flex; }
-            .mobile-toggle { display: block; }
-            .header-contacts { display: none; }
-            .hero-wrapper { flex-direction: column-reverse; text-align: center; }
-            .hero-badges { justify-content: center; }
-            .hero-img { width: 100%; }
-            .about-section { grid-template-columns: 1fr; }
-            .partner-badge { right: 50%; transform: translateX(50%); bottom: -20px; width: max-content; }
+            .nav-desk {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-desk.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .header-contacts {
+                display: none;
+            }
+
+            .hero-wrapper {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .hero-img {
+                width: 100%;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+
+            .partner-badge {
+                right: 50%;
+                transform: translateX(50%);
+                bottom: -20px;
+                width: max-content;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- 1. ШАПКА -->
@@ -244,19 +620,22 @@
                     <span class="badge badge-etagi"><i class="fas fa-shield-alt"></i> Гарантия ЭТАЖИ</span>
                 </div>
                 <h1>Недвижимость у моря<br>без рисков и переплат</h1>
-                <p>Ваш персональный гид по Калининграду Светлана. Душевный сервис частного брокера с юридической защитой компании №1 в России.</p>
-                
-                <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; md:justify-content: flex-start;">
+                <p>Ваш персональный гид по Калининграду Светлана. Душевный сервис частного брокера с юридической защитой
+                    компании №1 в России.</p>
+
+                <div
+                    style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; md:justify-content: flex-start;">
                     <a href="#quiz" class="btn">Подобрать квартиру</a>
                     <a href="catalog.html" class="btn btn-outline">Смотреть каталог</a>
                 </div>
             </div>
-            
+
             <div class="hero-img">
-                <img src="https://i.ibb.co/3sxhd6S/realtor.jpg" alt="Светлана риелтор">
+                <img src="images/18_05.jpg" alt="Светлана риелтор">
                 <!-- Бейдж партнера -->
                 <div class="partner-badge">
-                    <img src="https://cdn.etagi.com/static/site/6a0c487313/logo.svg" alt="Этажи" style="height: 20px; width: auto; border:none; border-radius:0; box-shadow:none;">
+                    <img src="https://cdn.etagi.com/static/site/6a0c487313/logo.svg" alt="Этажи"
+                        style="height: 20px; width: auto; border:none; border-radius:0; box-shadow:none;">
                     <span>Сертифицированный<br>партнер</span>
                 </div>
             </div>
@@ -271,21 +650,24 @@
                     <div class="trust-icon"><i class="fas fa-hand-holding-heart"></i></div>
                     <div class="trust-content">
                         <h4>Забота о вас</h4>
-                        <p>Я не «колл-центр». Я лично веду вас от звонка до вручения ключей, встречаю в аэропорту и помогаю адаптироваться.</p>
+                        <p>Я не «колл-центр». Я лично веду вас от звонка до вручения ключей, встречаю в аэропорту и
+                            помогаю адаптироваться.</p>
                     </div>
                 </div>
                 <div class="trust-item">
                     <div class="trust-icon"><i class="fas fa-file-contract"></i></div>
                     <div class="trust-content">
                         <h4>Безопасность «Этажей»</h4>
-                        <p>Юридическая проверка и проведение сделки через сервисы «Этажей». Вы получаете сертификат безопасности на всю сумму.</p>
+                        <p>Юридическая проверка и проведение сделки через сервисы «Этажей». Вы получаете сертификат
+                            безопасности на всю сумму.</p>
                     </div>
                 </div>
                 <div class="trust-item">
                     <div class="trust-icon"><i class="fas fa-percent"></i></div>
                     <div class="trust-content">
                         <h4>Ипотека дешевле</h4>
-                        <p>Как партнер крупной сети, я могу одобрить вам ипотеку со скидкой до 0.7% от ставок банков.</p>
+                        <p>Как партнер крупной сети, я могу одобрить вам ипотеку со скидкой до 0.7% от ставок банков.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -296,8 +678,9 @@
     <section id="quiz" class="quiz-section">
         <div class="container">
             <h2>Не тратьте время на поиск вслепую</h2>
-            <p style="margin-bottom: 30px;">Ответьте на 3 вопроса, и я пришлю подборку ликвидных квартир под ваш бюджет в WhatsApp.</p>
-            
+            <p style="margin-bottom: 30px;">Ответьте на 3 вопроса, и я пришлю подборку ликвидных квартир под ваш бюджет
+                в WhatsApp.</p>
+
             <div class="quiz-box">
                 <!-- Форма отправляет на thanks.html -->
                 <form action="thanks.html" method="GET">
@@ -326,7 +709,8 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-quiz">Получить подборку</button>
-                    <p style="font-size: 11px; margin-top: 15px; color: #ccc;">Нажимаю кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                    <p style="font-size: 11px; margin-top: 15px; color: #ccc;">Нажимаю кнопку, вы соглашаетесь с
+                        политикой конфиденциальности</p>
                 </form>
             </div>
         </div>
@@ -350,15 +734,20 @@
         <div class="container about-section">
             <div>
                 <h2>Как я работаю</h2>
-                <p style="margin-bottom: 20px;">Моя задача — сделать ваш переезд или инвестицию комфортной. Вы не платите мне лишних комиссий, мои услуги включены в стандарты работы компании.</p>
+                <p style="margin-bottom: 20px;">Моя задача — сделать ваш переезд или инвестицию комфортной. Вы не
+                    платите мне лишних комиссий, мои услуги включены в стандарты работы компании.</p>
                 <ul class="services-list">
-                    <li><i class="fas fa-check-circle"></i> <strong>Дистанционная покупка:</strong> Проведу видео-экскурсию, подпишем документы электронно.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Встреча и трансфер:</strong> Встречу в аэропорту Храброво, помогу заселиться.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Аналитика рынка:</strong> Честно скажу, какой район переоценен, а какой вырастет в цене.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Дистанционная покупка:</strong> Проведу
+                        видео-экскурсию, подпишем документы электронно.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Встреча и трансфер:</strong> Встречу в аэропорту
+                        Храброво, помогу заселиться.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Аналитика рынка:</strong> Честно скажу, какой район
+                        переоценен, а какой вырастет в цене.</li>
                 </ul>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Калининград" style="border-radius: 20px; box-shadow: var(--shadow);">
+                <img src="images/18_05.jpg" alt="Калининград"
+                    style="border-radius: 20px; box-shadow: var(--shadow); width: 100%; height: 400px; object-fit: cover;">
             </div>
         </div>
     </section>
@@ -370,7 +759,8 @@
             <div class="reviews-grid">
                 <!-- Отзыв 1 -->
                 <div class="review-card">
-                    <p class="review-text">"Светлана нашла нам квартиру за 3 дня, хотя мы планировали искать неделю. Очень удобно, что сделку оформили в офисе Этажей, все надежно."</p>
+                    <p class="review-text">"Светлана нашла нам квартиру за 3 дня, хотя мы планировали искать неделю.
+                        Очень удобно, что сделку оформили в офисе Этажей, все надежно."</p>
                     <div class="review-author">
                         <img src="https://randomuser.me/api/portraits/women/44.jpg" class="author-avatar" alt="Клиент">
                         <div class="author-info">
@@ -381,7 +771,8 @@
                 </div>
                 <!-- Отзыв 2 -->
                 <div class="review-card">
-                    <p class="review-text">"Покупал под инвестицию удаленно. Светлана отговорила от проблемного ЖК и предложила вариант, который уже вырос на 20%. Спасибо!"</p>
+                    <p class="review-text">"Покупал под инвестицию удаленно. Светлана отговорила от проблемного ЖК и
+                        предложила вариант, который уже вырос на 20%. Спасибо!"</p>
                     <div class="review-author">
                         <img src="https://randomuser.me/api/portraits/men/32.jpg" class="author-avatar" alt="Клиент">
                         <div class="author-info">
@@ -392,7 +783,8 @@
                 </div>
                 <!-- Отзыв 3 -->
                 <div class="review-card">
-                    <p class="review-text">"Боялись покупать вторичку из-за документов. Светлана подключила юристов Этажей, проверили продавца до 7-го колена. Спокойствие стоит того."</p>
+                    <p class="review-text">"Боялись покупать вторичку из-за документов. Светлана подключила юристов
+                        Этажей, проверили продавца до 7-го колена. Спокойствие стоит того."</p>
                     <div class="review-author">
                         <img src="https://randomuser.me/api/portraits/women/68.jpg" class="author-avatar" alt="Клиент">
                         <div class="author-info">
@@ -428,11 +820,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="legal-text">
                 <p>Сайт balthomes.ru носит информационный характер. <br>
-                Светлана [Фамилия] — независимый эксперт по недвижимости, действующий партнер федеральной сети «Этажи». <br>
-                Юридическое сопровождение сделок осуществляется ООО "Этажи-Калининград".</p>
+                    Светлана [Фамилия] — независимый эксперт по недвижимости, действующий партнер федеральной сети
+                    «Этажи». <br>
+                    Юридическое сопровождение сделок осуществляется ООО "Этажи-Калининград".</p>
                 <p style="margin-top: 10px;">© 2026 Все права защищены.</p>
             </div>
         </div>
@@ -447,4 +840,5 @@
     <script src="js/properties.js"></script>
     <script src="js/telegram-sender.js"></script>
 </body>
+
 </html>2Hfile:///Users/johnsky/Downloads/ai_studio_code%20%2814%29%20%281%29.html
