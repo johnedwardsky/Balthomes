@@ -245,17 +245,38 @@
         .partner-badge {
             position: absolute;
             bottom: 20px;
-            right: -10px;
+            right: -15px;
             background: var(--white);
-            padding: 10px 15px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 12px 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 12px;
-            font-weight: bold;
-            color: #333;
+            gap: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary);
+            border: 1px solid rgba(168, 132, 74, 0.2);
+            animation: badgeFloat 3s ease-in-out infinite;
+        }
+
+        .badge-icon {
+            font-size: 22px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+        }
+
+        @keyframes badgeFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
         }
 
         /* --- POSITIONING BLOCK (TRUST) --- */
@@ -631,11 +652,12 @@
             </div>
 
             <div class="hero-img">
-                <img src="images/18_05.jpg" alt="Светлана риелтор">
+                <img src="images/realtor.jpg" alt="Светлана риелтор">
                 <!-- Бейдж партнера -->
                 <div class="partner-badge">
+                    <div class="badge-icon"><i class="fas fa-award"></i></div>
                     <img src="https://cdn.etagi.com/static/site/6a0c487313/logo.svg" alt="Этажи"
-                        style="height: 20px; width: auto; border:none; border-radius:0; box-shadow:none;">
+                        style="height: 18px; width: auto; border:none; border-radius:1px; box-shadow:none;">
                     <span>Сертифицированный<br>партнер</span>
                 </div>
             </div>
@@ -746,7 +768,7 @@
                 </ul>
             </div>
             <div>
-                <img src="images/18_05.jpg" alt="Калининград"
+                <img src="images/about_me.jpg" alt="Калининград"
                     style="border-radius: 20px; box-shadow: var(--shadow); width: 100%; height: 400px; object-fit: cover;">
             </div>
         </div>

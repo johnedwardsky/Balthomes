@@ -46,8 +46,8 @@ async function sendToTelegram(event) {
         });
 
         if (response.ok) {
-            alert('Спасибо! Ваша заявка отправлена. Мы скоро свяжемся с вами.');
-            form.reset(); // Очистить форму
+            // Перенаправление на страницу "Спасибо"
+            window.location.href = 'thanks.html';
         } else {
             console.error('Ошибка отправки:', await response.text());
             alert('Что-то пошло не так. Попробуйте снова или свяжитесь по телефону.');
